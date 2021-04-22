@@ -29,7 +29,7 @@ const Home = () => {
         })
     }
 
-    function onFinish(values ) {
+    function onFinish( values ) {
         history.push(`/${values.pais}`) ;
     }
 
@@ -45,7 +45,7 @@ const Home = () => {
            <Form.Item name="pais" rules={ [ { required: true, message: "Campo Obrigatório"} ] }>
                 <Select onChange={selecionarPais} placeHolder="Selecione o País" loading={loading}>
                     <Select.Option>Selecione</Select.Option> 
-                    {paises.map(pais => (
+                    { paises.map( (pais) => (
                         <Select.Option key={pais} value={pais}>{pais}</Select.Option>
                     ))}
                 </Select>
